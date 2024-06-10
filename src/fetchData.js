@@ -27,7 +27,14 @@ export const fetchData = async () => {
             from: requestDate,
             to: requestDate
         })
-    }).then((resp) => resp.json());
+    })
+        .then((resp) => {
+            console.log("Raw API Response:", resp);
+            return resp.json();
+        })
+        .catch(error => {
+            console.error("Error fetching or parsing data:", error);
+        });
 
     if (response.status && response.status === 'error') {
         throw new Error(`Error fetching data: ${response.message}`);
