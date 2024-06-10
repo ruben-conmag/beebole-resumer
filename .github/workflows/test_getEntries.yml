@@ -35,4 +35,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: echo ENV_FILE=${{ secrets.ENV_FILE }} >> .env
     - run: npm run get-entries
