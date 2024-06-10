@@ -28,8 +28,9 @@ export const fetchData = async () => {
             to: requestDate
         })
     })
-        .then((resp) => {
+        .then(async (resp) => {
             console.log("Raw API Response:", resp);
+            console.log("JSON API Response:", await resp.json());
             return resp.json();
         })
         .catch(error => {
