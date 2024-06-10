@@ -27,13 +27,9 @@ export const fetchData = async () => {
             from: requestDate,
             to: requestDate
         })
-    })
-        .then((resp) => resp.json())
-        .catch((err) => {
-            console.log(err);
-        });
+    }).then((resp) => resp.json());
 
-    if (response.status === 'error') {
+    if (response.status && response.status === 'error') {
         throw new Error(`Error fetching data: ${response.message}`);
     }
 
