@@ -1,0 +1,16 @@
+{
+  "name": "alice-x-beebole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "get-entries": "node index.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "luxon": "^3.4.4"
+  }
+}
