@@ -1,4 +1,3 @@
-
 # Beebole Resumer
 
 Retrieve the previous day's beebole entries and format them into a user-friendly string excluding weekends.
@@ -11,7 +10,7 @@ Retrieve the previous day's beebole entries and format them into a user-friendly
 
 1. Click on customize
 
-2. Drag and drop the module *API Token* into the work zone
+2. Drag and drop the module _API Token_ into the work zone
 
 3. Copy the value on the `base64` field and use it as the `BASE64_AUTH_TOKEN` environment variable.
 
@@ -21,7 +20,7 @@ Retrieve the previous day's beebole entries and format them into a user-friendly
 
 1. Click on customize
 
-2. Drag and drop the module *Recent* into the work zone
+2. Drag and drop the module _Recent_ into the work zone
 
 3. Click on the People dropdown
 
@@ -35,4 +34,4 @@ Retrieve the previous day's beebole entries and format them into a user-friendly
 
 It is possible to send a message to a discord channel using the webhook url. More information about discord's webhooks [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) or [here](https://discord.com/developers/docs/resources/webhook).
 
-Once you have this information, you can set the `DISCORD_WEBHOOK_URL` environment variable. `DISCORD_WEBHOOK_NAME` is optional and it is *Beebole Resumer* by default.
+Once you have this information, you can set the `DISCORD_WEBHOOK_URL` environment variable. `DISCORD_WEBHOOK_NAME` is optional and it is _Beebole Resumer_ by default.

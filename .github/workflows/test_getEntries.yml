@@ -1,19 +1,19 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: '[Test] Get Entries'
+name: "[Test] Get Entries"
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
-        logLevel:
-          description: 'Log level'
-          required: true
-          default: 'warning'
-          type: choice
-          options:
+      logLevel:
+        description: "Log level"
+        required: true
+        default: "warning"
+        type: choice
+        options:
           - info
           - warning
           - debug
@@ -28,19 +28,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
 
-    - run: npm ci
+      - run: npm ci
 
-    - name: Create ENV file
-      env:
-        ENV_FILE: ${{ secrets.ENV_FILE }}
-      run: echo "$ENV_FILE" >> ./.env
+      - name: Create ENV file
+        env:
+          ENV_FILE: ${{ secrets.ENV_FILE }}
+        run: echo "$ENV_FILE" >> ./.env
 
-    - run: npm run get-entries
+      - run: npm run get-entries
