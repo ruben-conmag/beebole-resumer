@@ -25,9 +25,13 @@ export const fetchData = async () => {
             service: "time_entry.list",
             person: { id: USER_ID },
             from: requestDate,
-            to: requestDate,
-        }),
-    }).then((resp) => resp.json());
+            to: requestDate
+        })
+    })
+        .then((resp) => resp.json())
+        .catch((err) => {
+            console.log(err);
+        });
 
     if (response.status === 'error') {
         throw new Error(`Error fetching data: ${response.message}`);
