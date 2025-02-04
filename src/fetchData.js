@@ -106,6 +106,8 @@ export const fetchAndSendBeeboleEntries = async (date) => {
 
     // Send the notification
     await sendNotification(message);
+
+    return message;
   } catch (error) {
     console.error("Error fetching or processing Beebole entries:", error);
   }
