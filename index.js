@@ -1,10 +1,13 @@
 import "dotenv/config";
-import { fetchAndSendBeeboleEntries } from "./src/fetchData.js";
+import { fetchAndSendBeeboleEntries, determineTargetDate } from "./src/fetchData.js";
 
 (async () => {
   try {
-    await fetchAndSendBeeboleEntries();
-    await fetchAndSendBeeboleEntries(true);
+    const today = new Date();
+    const previousDate = determineTargetDate(today);
+
+    await fetchAndSendBeeboleEntries(previousDate);
+    await fetchAndSendBeeboleEntries(today);
   } catch (error) {
     console.error(error);
   }
