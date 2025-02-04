@@ -12,7 +12,7 @@ Retrieve the previous day's beebole entries and format them into a user-friendly
 
 2. Drag and drop the module _API Token_ into the work zone
 
-3. Copy the value on the `base64` field and use it as the `BASE64_AUTH_TOKEN` environment variable.
+3. Copy the value on the `base64` field and use it as the `BEEBOLE_BASE64_API_TOKEN` environment variable.
 
 ![get-api-token](./docs/get-api-token.png)
 
@@ -26,7 +26,7 @@ Retrieve the previous day's beebole entries and format them into a user-friendly
 
 4. Click on the user to go to it's profile
 
-5. The profile url should be `https://beebole-apps.com/#person-{ID}`. Use the number in the place of `{ID}` as the `USER_ID` environment variable.
+5. The profile url should be `https://beebole-apps.com/#person-{ID}`. Use the number in the place of `{ID}` as the `BEEBOLE_USER_ID` environment variable.
 
 ![get-api-token](./docs/get-user-id.png)
 
